@@ -1,8 +1,9 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import Link from "next/link"
-import { Menu, X, ChevronDown, Mail, Phone, GraduationCap } from "lucide-react"
+import { Menu, X, ChevronDown, Mail, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -166,8 +167,14 @@ export function Navbar() {
           <nav className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-lg flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 lg:w-8 lg:h-8 text-accent" />
+              <div className="relative w-10 h-10 lg:w-12 lg:h-12 flex-shrink-0">
+                <Image
+                  src="/eswar_college.jpeg"
+                  alt="Eswar College of Engineering"
+                  fill
+                  className="object-contain rounded-lg"
+                  priority
+                />
               </div>
               <div className="hidden sm:block">
                 <h1 className={cn(

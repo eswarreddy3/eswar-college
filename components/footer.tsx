@@ -1,5 +1,6 @@
+import Image from "next/image"
 import Link from "next/link"
-import { GraduationCap, MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react"
+import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Youtube } from "lucide-react"
 
 const footerLinks = {
   about: [
@@ -49,8 +50,13 @@ export function Footer() {
           {/* About Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-                <GraduationCap className="w-8 h-8 text-accent-foreground" />
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image
+                  src="/eswar_college.jpeg"
+                  alt="Eswar College of Engineering"
+                  fill
+                  className="object-contain rounded-lg"
+                />
               </div>
               <div>
                 <h2 className="font-serif font-bold text-xl tracking-tight">ESWAR</h2>
